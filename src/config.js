@@ -4,7 +4,7 @@ dotenv.config();
 
 export default {
     app: {
-        db: process.env.DB_URI || 'mongodb://localhost/app',
+        db: `${process.env.DB_URI}/${process.env.DB_NAME}` || 'mongodb://localhost:27017/app',
         port: process.env.PORT || 4000,
     },
     client: {

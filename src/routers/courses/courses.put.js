@@ -16,7 +16,7 @@ const resultHandler = (req, res) => {
         date: req.body.date,
         length: req.body.length,
         isTopRated: !!req.body.isTopRated,
-        playlist: req.body.playlist,
+        playlist: req.params.playlistId,
         description: req.body.description,
     };
     const itemQuery = {

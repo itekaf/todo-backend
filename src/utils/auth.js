@@ -6,7 +6,7 @@ import config from '../config';
 const authUtils = {
     generateToken: (data) => {
         const answerData = {
-            id: data.id,
+            id: data.id || data._id,
             name: data.name,
             username: data.username,
             providers: data.providers,

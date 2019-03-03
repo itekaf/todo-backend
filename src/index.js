@@ -15,7 +15,12 @@ const app = express();
 
 // DataBase
 const MongoStore = connectMongo(expressSession);
-mongoose.connect(config.app.db, { useNewUrlParser: true });
+const MongoSettings = {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+};
+mongoose.connect(config.app.db, MongoSettings);
 const db = mongoose.connection;
 
 // CORS Settings
