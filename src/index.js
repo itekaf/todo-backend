@@ -51,6 +51,7 @@ const v1 = express.Router();
 v1.use('/signin', Routers.Singin);
 v1.use('/signup', Routers.Singup);
 v1.use('/lists', Routers.Lists);
+v1.use('/playlists', Routers.Playlists);
 v1.use('/user', Routers.User);
 
 const api = express.Router();

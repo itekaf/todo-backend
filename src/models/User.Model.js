@@ -14,6 +14,7 @@ const UserSchema = new Schema({
         of: ProviderSchema,
     },
     lists: [{ type: Schema.Types.ObjectId, ref: 'Lists' }],
+    playlists: [{ type: Schema.Types.ObjectId, ref: 'Playlists' }],
 });
 
 const UserModel = model('Users', UserSchema);
