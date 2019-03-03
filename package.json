@@ -1,0 +1,58 @@
+{
+    "author": "Roman <romanrostislavovich@gmail.com>",
+    "name": "todo-server",
+    "version": "0.0.0-development",
+    "description": "Simple Server for TODO",
+    "license": "MIT",
+    "repository": "svoboda-rabstvo/todo-backend",
+    "bugs": "https://github.com/svoboda-rabstvo/todo-backend/issue",
+    "private": true,
+    "main": "src/index.js",
+    "scripts": {
+        "start": "webpack --config ./config/webpack.config.js --mode development --watch",
+        "build": "webpack --config ./config/webpack.config.js --mode production",
+        "lint": "eslint .",
+        "test": "npm run lint && npm run build"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run test"
+        }
+    },
+    "dependencies": {
+        "bcrypt": "^3.0.2",
+        "body-parser": "^1.18.3",
+        "connect-mongo": "^2.0.3",
+        "cookie-parser": "^1.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "express-session": "^1.15.6",
+        "express-validator": "^5.3.0",
+        "jsonwebtoken": "^8.4.0",
+        "mongodb": "^3.1.10",
+        "mongoose": "^5.3.16",
+        "mongoose-relationship": "^0.1.5",
+        "morgan": "^1.9.1",
+        "passport": "^0.4.0",
+        "passport-github2": "^0.1.11",
+        "passport-jwt": "^4.0.0",
+        "passport-local": "^1.0.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^5.6.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "husky": "^1.2.0",
+        "nodemon": "^1.18.8",
+        "nodemon-webpack-plugin": "^4.0.6",
+        "webpack": "^4.28.1",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.9",
+        "webpack-node-externals": "^1.7.2"
+    }
+}
